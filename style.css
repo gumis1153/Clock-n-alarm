@@ -1,0 +1,205 @@
+/* font-family: 'Rajdhani', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("640.jpg");
+    background-repeat: no-repeat;
+    background-position: 65% 50%;
+    background-size: auto 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 130px 1fr 30px;
+}
+
+header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Rajdhani', sans-serif;
+    color: #EBEFEE;
+    font-weight: 300;
+    font-size: 42px;
+}
+
+.time {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeBgc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 85px;
+    background-color: rgba(235, 239, 238, .7);
+}
+
+.currentTime {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 52px;
+    color: #7C7C74;
+    font-weight: 300;
+}
+
+.alarmBgc {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alarmContainer {
+    width: 275px;
+    height: 230px;
+    background-color: rgba(235, 239, 238, .7);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(5, 1fr); */
+    grid-template-rows: 45px 30px 45px 30px 1fr;
+}
+
+.alarmContainer button {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.buttonConteinerHourUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.buttonConteinerMinutesUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.buttonConteinerHourDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+.buttonConteinerminutesDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+
+.buttonContainerSetTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 4;
+    grid-row: 5 / 6;
+}
+
+button.setAlarm {
+    width: 125px;
+    height: 35px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #7C7C74;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+    border: none;
+    border-radius: 0;
+}
+
+.alarmSet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 42px;
+    color: #7C7C74;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.fas {
+    color: #7C7C74;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(235, 239, 238, .7);
+}
+
+footer span {
+    font-family: 'Rajdhani', sans-serif;
+    color: #7C7C74;
+    font-size: 10px;
+}
+
+@media (min-width: 568px) and (orientation:landscape) {
+    body {
+        background-position: center;
+        background-size: 100% auto;
+    }
+
+    .wrapper {
+        grid-template-rows: 55px 70px 1fr 20px;
+    }
+
+    .timeBgc {
+        height: 55px;
+    }
+
+    .alarmContainer {
+        height: 155px;
+        grid-template-rows: 5px 30px 45px 30px 1fr;
+    }
+
+    button.setAlarm {
+        width: 120px;
+
+    }
+
+    footer {
+        height: 20px;
+    }
+}
