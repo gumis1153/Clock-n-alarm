@@ -1,14 +1,6 @@
 const currentTime = document.querySelector(".currentTime");
-const alarmTime = document.querySelector(".alarmSet");
-const hourUp = document.querySelector(".hourUp");
-const minutesUp = document.querySelector(".minutesUp");
-const hourDown = document.querySelector(".hourDown");
-const minutesDown = document.querySelector(".minutesDown");
-// działaj na inputach value
-const inputHours = document.querySelector(".inputHours");
-const inputMinutes = document.querySelector(".inputMinutes");
-let alarmHour = 12;
-let alarmMinutes = 30;
+const setAlarm = document.querySelector(".setAlarm");
+const inputAlarm = document.querySelector(".inputAlarmTime");
 
 const refreshTime = () => {
   let hours = new Date().getHours();
@@ -29,53 +21,12 @@ const refreshTime = () => {
 };
 
 refreshTime();
-// zmień na value z inputów
-hourUp.addEventListener("click", () => {
-  inputHours.value++;
-  console.log(inputHours.value);
-  if (alarmHour > 23) {
-    alarmHour = 0;
-  }
-  console.log(alarmHour);
-  let alarmTimeSet = `${alarmHour}:${alarmMinutes}`;
-  alarmTime.innerHTML = alarmTimeSet;
+
+setAlarm.addEventListener("click", () => {
+  let alarmTime = inputAlarm.value;
+  console.log(currentTime.textContent);
+  console.log(alarmTime + ":00");
+
+  // check();
+  // if(alarmTime === )
 });
-
-minutesUp.addEventListener("click", () => {
-  alarmMinutes += 1;
-  if (alarmMinutes > 59) {
-    alarmMinutes = 0;
-  }
-  console.log(alarmMinutes);
-  let alarmTimeSet = `${alarmHour}:${alarmMinutes}`;
-  alarmTime.innerHTML = alarmTimeSet;
-});
-
-hourDown.addEventListener("click", () => {
-  alarmHour -= 1;
-  if (alarmHour < 0) {
-    alarmHour = 23;
-  }
-  console.log(alarmHour);
-  let alarmTimeSet = `${alarmHour}:${alarmMinutes}`;
-  alarmTime.innerHTML = alarmTimeSet;
-});
-
-minutesDown.addEventListener("click", () => {
-  alarmMinutes -= 1;
-  if (alarmMinutes < 0) {
-    alarmMinutes = 59;
-  }
-  console.log(alarmMinutes);
-  let alarmTimeSet = `${alarmHour}:${alarmMinutes}`;
-  alarmTime.innerHTML = alarmTimeSet;
-});
-
-if (alarmHour < 10) {
-  alarmHour = `0${alarmHour}`;
-}
-if (alarmMinutes < 10) {
-  alarmMinutes = `0${alarmMinutes}`;
-}
-
-console.log(alarmTimeSet);

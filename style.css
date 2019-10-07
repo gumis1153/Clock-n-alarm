@@ -1,304 +1,309 @@
 /* font-family: 'Rajdhani', sans-serif; */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
-    background-image: url("640.jpg");
-    background-repeat: no-repeat;
-    background-position: 65% 50%;
-    background-size: auto 100%;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background-image: url("640.jpg");
+  background-repeat: no-repeat;
+  background-position: 65% 50%;
+  background-size: auto 100%;
 }
 
 .wrapper {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 130px 1fr 30px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 130px 1fr 30px;
 }
 
 header {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
-    font-family: 'Rajdhani', sans-serif;
-    color: #EBEFEE;
-    font-weight: 300;
-    font-size: 42px;
+  font-family: "Rajdhani", sans-serif;
+  color: #ebefee;
+  font-weight: 300;
+  font-size: 42px;
 }
 
 .time {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .timeBgc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 275px;
-    height: 85px;
-    background-color: rgba(235, 239, 238, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 275px;
+  height: 85px;
+  background-color: rgba(235, 239, 238, 0.7);
 }
 
 .currentTime {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 52px;
-    color: #7C7C74;
-    font-weight: 300;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 52px;
+  color: #7c7c74;
+  font-weight: 300;
 }
 
 .alarmBgc {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .alarmContainer {
-    width: 275px;
-    height: 230px;
-    background-color: rgba(235, 239, 238, .7);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(5, 1fr); */
-    grid-template-rows: 35px 30px 45px 30px 1fr;
+  width: 275px;
+  height: 230px;
+  background-color: rgba(235, 239, 238, 0.7);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-rows: 35px 30px 45px 30px 1fr;
 }
 
 .alarmContainer button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
-    outline: none;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  outline: none;
+  cursor: pointer;
 }
 
 .buttonConteinerHourUp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 .buttonConteinerMinutesUp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
 }
 
 .buttonConteinerHourDown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
 }
 
 .buttonConteinerminutesDown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
 }
 
 .buttonContainerSetTime {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 2 / 4;
-    grid-row: 5 / 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / 4;
+  grid-row: 5 / 6;
 }
 
 button.setAlarm {
-    width: 125px;
-    height: 35px;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #7C7C74;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
-    border: none;
-    border-radius: 0;
+  width: 125px;
+  height: 35px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #7c7c74;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 0;
+  transition: 0.4s;
+}
+
+button.setAlarm:hover {
+  transform: translateY(5%);
+  box-shadow: 0 3px 6px rgba(164, 100, 114, 0.7);
 }
 
 .alarmSet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 42px;
-    color: #7C7C74;
-    font-weight: 300;
-    letter-spacing: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 42px;
+  color: #7c7c74;
+  font-weight: 300;
+  letter-spacing: 4px;
 }
 
 .alarmSet input {
-    width: 42px;
-    height: 42px;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 42px;
-    color: #7C7C74;
-    background-color: transparent;
-    text-align: center;
-    border: none;
-    outline: none;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  /* width: 42px;
+  height: 42px; */
+  width: 100%;
+  height: 100%;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 30px;
+  color: #7c7c74;
+  text-align: center;
+  padding-left: 22px;
+  border: none;
+  outline: none;
 }
 
 .fas {
-    color: #7C7C74;
+  color: #7c7c74;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    width: 100%;
-    height: 30px;
-    background-color: rgba(235, 239, 238, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(235, 239, 238, 0.7);
 }
 
 footer span {
-    font-family: 'Rajdhani', sans-serif;
-    color: #7C7C74;
-    font-size: 10px;
+  font-family: "Rajdhani", sans-serif;
+  color: #7c7c74;
+  font-size: 10px;
 }
 
-@media (min-width: 568px) and (orientation:landscape) {
-    body {
-        background-position: center;
-        background-size: 100% auto;
-    }
+@media (min-width: 568px) and (orientation: landscape) {
+  body {
+    background-position: center;
+    background-size: 100% auto;
+  }
 
-    .wrapper {
-        grid-template-rows: 55px 70px 1fr 20px;
-    }
+  .wrapper {
+    grid-template-rows: 55px 70px 1fr 20px;
+  }
 
-    .timeBgc {
-        height: 55px;
-    }
+  .timeBgc {
+    height: 55px;
+  }
 
-    .alarmContainer {
-        height: 155px;
-        grid-template-rows: 5px 30px 45px 30px 1fr;
-    }
+  .alarmContainer {
+    height: 155px;
+    grid-template-rows: 5px 30px 45px 30px 1fr;
+  }
 
-    button.setAlarm {
-        width: 120px;
+  button.setAlarm {
+    width: 120px;
+  }
 
-    }
-
-    footer {
-        height: 20px;
-    }
+  footer {
+    height: 20px;
+  }
 }
 
-@media (min-width: 768px) and (orientation:portrait) {
-    body {
-        background-image: url("1920.jpg");
-    }
+@media (min-width: 768px) and (orientation: portrait) {
+  body {
+    background-image: url("1920.jpg");
+  }
 
-    .wrapper {
-        grid-template-rows: 230px 230px 1fr 30px;
-    }
+  .wrapper {
+    grid-template-rows: 230px 230px 1fr 30px;
+  }
 }
 
-@media (min-width:768px) {
-    body {
-        background-image: url("1920.jpg");
-        background-size: auto 100%;
-    }
+@media (min-width: 768px) {
+  body {
+    background-image: url("1920.jpg");
+    background-size: auto 100%;
+  }
 
-    .wrapper {
-        grid-template-rows: 170px 230px 1fr 30px;
-    }
+  .wrapper {
+    grid-template-rows: 170px 230px 1fr 30px;
+  }
 
-    .timeBgc {
-        height: 100px;
-    }
+  .timeBgc {
+    height: 100px;
+  }
 
-    .alarmContainer {
-        height: 230px;
-        grid-template-rows: 20px 30px 45px 30px 1fr;
-    }
+  .alarmContainer {
+    height: 230px;
+    grid-template-rows: 20px 30px 45px 30px 1fr;
+  }
 
-    footer {
-        height: 30px;
-    }
+  .alarmSet input {
+    padding-left: 32px;
+  }
+
+  footer {
+    height: 30px;
+  }
 }
 
-@media (min-width: 1024px) and (orientation:landscape) {
-    body {
-        background-size: auto 100%;
-        background-image: url("1920.jpg");
-    }
+@media (min-width: 1024px) and (orientation: landscape) {
+  body {
+    background-size: auto 100%;
+    background-image: url("1920.jpg");
+  }
 
-    .wrapper {
-        grid-template-rows: 200px 170px 1fr 30px;
-    }
+  .wrapper {
+    grid-template-rows: 200px 170px 1fr 30px;
+  }
 
-    .timeBgc {
-        height: 100px;
-    }
+  .timeBgc {
+    height: 100px;
+  }
 
-    .alarmContainer {
-        height: 230px;
-        grid-template-rows: 25px 30px 45px 30px 1fr;
-    }
+  .alarmContainer {
+    height: 230px;
+    grid-template-rows: 25px 30px 45px 30px 1fr;
+  }
 
-    footer {
-        height: 30px;
-    }
+  footer {
+    height: 30px;
+  }
 }
 
-@media (min-width: 1024px) and (orientation:portrait) {
-    body {
-        background-size: auto 100%;
-        background-image: url("1920.jpg");
-    }
+@media (min-width: 1024px) and (orientation: portrait) {
+  body {
+    background-size: auto 100%;
+    background-image: url("1920.jpg");
+  }
 
-    .wrapper {
-        grid-template-rows: 320px 170px 1fr 30px;
-    }
+  .wrapper {
+    grid-template-rows: 320px 170px 1fr 30px;
+  }
 }
 
-@media (min-width:1050px) {
-    body {
-        background-size: 120%;
-    }
+@media (min-width: 1050px) {
+  body {
+    background-size: 120%;
+  }
 }
