@@ -9,6 +9,7 @@
 body {
   width: 100%;
   max-width: 100%;
+  min-height: 100vh;
   height: 100vh;
   background-image: url("640.jpg");
   background-repeat: no-repeat;
@@ -22,6 +23,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px 130px 1fr 30px;
+  /* grid-template-rows: 1fr 1fr 1fr 30px; */
 }
 
 header {
@@ -95,36 +97,8 @@ header h1 {
   cursor: pointer;
 }
 
-.buttonConteinerHourUp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.buttonConteinerMinutesUp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
-.buttonConteinerHourDown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
-}
-
-.buttonConteinerminutesDown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 3 / 4;
-  grid-row: 4 / 5;
+.alarmToRing {
+  display: none;
 }
 
 .buttonContainerSetTime {

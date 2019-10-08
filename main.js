@@ -1,6 +1,9 @@
 const currentTime = document.querySelector(".currentTime");
 const setAlarm = document.querySelector(".setAlarm");
 const inputAlarm = document.querySelector(".inputAlarmTime");
+const alarmToRing = document.querySelector(".alarmToRing");
+const alarmSound = new Audio("alarmSound.mp3");
+let alarmIsSet = false;
 
 const refreshTime = () => {
   let hours = new Date().getHours();
@@ -24,9 +27,48 @@ refreshTime();
 
 setAlarm.addEventListener("click", () => {
   let alarmTime = inputAlarm.value;
-  console.log(currentTime.textContent);
-  console.log(alarmTime + ":00");
+  console.log(currentTime.textContent); //czas obecny
+  console.log(alarmTime); //czas budzika
+  if (alarmTime === "") {
+    alert("Enter correct value of alarm");
+    return;
+  } else {
+    //działa
+    alarmIsSet = !alarmIsSet;
+    if (alarmIsSet === true) {
+      alarmToRing.textContent = alarmTime;
+      inputAlarm.style.display = "none";
+      alarmToRing.style.display = "block";
+      index = setInterval(checkAlarm, 200);
+    } else {
+      defaultStyles();
+    }
+  }
 
-  // check();
-  // if(alarmTime === )
+  if (alarmIsSet === false) {
+    setAlarm.textContent = "Set alarm";
+  } else {
+    setAlarm.textContent = "Cancel";
+  }
 });
+
+const defaultStyles = () => {
+  alarmToRing.textContent = null;
+  inputAlarm.style.display = "block";
+  alarmToRing.style.display = "none";
+  setAlarm.textContent = "Set alarm";
+};
+
+const checkAlarm = () => {
+  if (alarmIsSet === true) {
+    if (`${inputAlarm.value}:00` === currentTime.textContent) {
+      console.log("ALARM!!!!!!");
+      alarmSound.play();
+      alarmIsSet = false;
+      defaultStyles();
+    } else {
+      console.log("sprawdzam");
+      return;
+    }
+  } else return;
+};
