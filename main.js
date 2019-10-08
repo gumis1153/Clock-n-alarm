@@ -27,13 +27,10 @@ refreshTime();
 
 setAlarm.addEventListener("click", () => {
   let alarmTime = inputAlarm.value;
-  console.log(currentTime.textContent); //czas obecny
-  console.log(alarmTime); //czas budzika
   if (alarmTime === "") {
     alert("Enter correct value of alarm");
     return;
   } else {
-    //działa
     alarmIsSet = !alarmIsSet;
     if (alarmIsSet === true) {
       alarmToRing.textContent = alarmTime;
@@ -62,13 +59,9 @@ const defaultStyles = () => {
 const checkAlarm = () => {
   if (alarmIsSet === true) {
     if (`${inputAlarm.value}:00` === currentTime.textContent) {
-      console.log("ALARM!!!!!!");
       alarmSound.play();
       alarmIsSet = false;
       defaultStyles();
-    } else {
-      console.log("sprawdzam");
-      return;
-    }
+    } else return;
   } else return;
 };

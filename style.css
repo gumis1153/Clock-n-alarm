@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -25,8 +26,14 @@ body {
 header {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -40,14 +47,26 @@ header h1 {
 .time {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .timeBgc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 275px;
   height: 85px;
@@ -64,8 +83,14 @@ header h1 {
 .alarmBgc {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -79,14 +104,21 @@ header h1 {
 }
 
 .alarmContainer button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 20px;
   height: 20px;
   background-color: #fff;
   border: none;
   border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   outline: none;
   cursor: pointer;
@@ -97,8 +129,14 @@ header h1 {
 }
 
 .buttonContainerSetTime {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   grid-column: 2 / 4;
   grid-row: 5 / 6;
@@ -111,20 +149,30 @@ button.setAlarm {
   font-size: 18px;
   text-transform: uppercase;
   color: #7c7c74;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 0;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 button.setAlarm:hover {
+  -webkit-transform: translateY(5%);
   transform: translateY(5%);
+  -webkit-box-shadow: 0 3px 6px rgba(164, 100, 114, 0.7);
   box-shadow: 0 3px 6px rgba(164, 100, 114, 0.7);
 }
 
 .alarmSet {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   grid-column: 2 / 4;
   grid-row: 3 / 4;
@@ -164,8 +212,14 @@ h4.alarmTitle {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   grid-column: 1 / 2;
   grid-row: 4 / 5;
